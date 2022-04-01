@@ -27,18 +27,15 @@ function bookIndex(nums) {
         if(nums[i] + 1 === nums[i+1]){
             if(first === 0) {
                 first = nums[i].toString()
-                console.log("first: " + first)
             }
 
             else if(nums[i + 1]  + 1 === nums[i+2]) {
                 mid = nums[i].toString()
-                console.log("mid: " + mid)
             }
             else {}
         }
         else if(nums[i] === nums[i-1] + 1) {
                 last = nums[i].toString()
-                console.log("last: " + last)
                 if(i < nums.length - 1){
                     answer += first + "-" + last + ", "
                 }
@@ -62,4 +59,3 @@ function bookIndex(nums) {
     return answer
 }
 console.log(bookIndex(nums1))
-module.exports = { bookIndex, nums1, expected1 };
